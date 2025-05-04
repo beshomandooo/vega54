@@ -1,3 +1,4 @@
+
 import fs from "fs/promises";
 import path from "path";
 
@@ -28,7 +29,8 @@ export default async function handler(req, res) {
   const token = req.query.token || null;
 
   if (!token) {
-    res.status(401).send("Unauthorized access. No token."); return;
+    res.status(401).send("Unauthorized access. No token.");
+    return;
   }
 
   const userId = getUserId(ip);
@@ -41,9 +43,10 @@ export default async function handler(req, res) {
   } catch {
     let links;
     try {
-      links = await fs.readFile(path.join(process.cwd(), "links.txt"), "utf-8");
+      links = await fs.readFile(path.join(__dirname, "links.txt"), "utf-8");
     } catch {
-      res.status(500).send("No valid download links found."); return;
+      res.status(500).send("No valid download links found.");
+      return;
     }
 
     const linkList = links
@@ -52,7 +55,8 @@ export default async function handler(req, res) {
       .filter(Boolean);
 
     if (linkList.length === 0) {
-      res.status(500).send("No valid links."); return;
+      res.status(500).send("No valid links.");
+      return;
     }
 
     const index = getCrcIndex(userId, linkList.length);
@@ -64,20 +68,14 @@ export default async function handler(req, res) {
   }
 
   if (!/^https?:\/\//i.test(finalLink)) {
-    res.status(400).send("Invalid download URL."); return;
+    res.status(400).send("Invalid download URL.");
+    return;
   }
 
   const filename = path.basename(finalLink);
 
   res.setHeader("Content-Type", "application/octet-stream");
-res.setHeader("Content-Disposition", `attachment; filename="${filename}"`);
-res.setHeader("Location", finalLink);
-res.status(302).end();
-return;
-/* replaced:
-      "Content-Type": "application/octet-stream",
-      "Content-Disposition": `attachment; filename="${filename}"`,
-      Location: finalLink
-    }
-  }
-*/
+  res.setHeader("Content-Disposition", `attachment; filename="${filename}"`);
+  res.setHeader("Location", finalLink);
+  res.status(302).end();
+}
